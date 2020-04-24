@@ -46,6 +46,10 @@ end
          run_command_isolated_from_bundle(*args) do |runner|
             runner.command_prefix = "bundle exec"
             runner.env['BUNDLE_GEMFILE'] = fs.find_in_project('Gemfile').to_s
+            $stderr.puts(ENV.keys.grep(/GEM/).reduce({}) { |res, key| res.merge({key => ENV[key]}) }.inspect)
+            runner.env['GEM_HOME'] = ENV['BUNDLER_ORIG_GEM_HOME'] if "#{ENV['BUNDLER_ORIG_GEM_HOME']}" !~ /NIL/
+            runner.env['GEM_PATH'] = ENV['BUNDLER_ORIG_GEM_PATH'] if "#{ENV['BUNDLER_ORIG_GEM_PATH']}" !~ /NIL/
+            $stderr.puts(runner.env.keys.grep(/GEM/).reduce({}) { |res, key| res.merge({key => runner.env[key]}) }.inspect)
 
             yield runner if block_given?
          end

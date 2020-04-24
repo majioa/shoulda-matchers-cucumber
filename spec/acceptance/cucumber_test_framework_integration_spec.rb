@@ -14,6 +14,17 @@ RSpec.describe 'shoulda-matchers integrates libs for cucumber framework' do
          end
       FILE
 
+      a = run_command!("env")
+      $stderr.puts a.output
+      a = run_command!("cat " + fs.find_in_project('Gemfile').to_s)
+      $stderr.puts a.output
+      a = run_command_within_bundle("bundle")
+      $stderr.puts a.output
+      a = run_command!("bundle exec gem list")
+      $stderr.puts a.output
+      a = run_command_within_bundle("bundle exec rake -T")
+      $stderr.puts a.output
+
       run_rake_tasks!(*%w(db:drop db:create db:migrate))
 
       write_file 'app/models/user.rb', <<-FILE

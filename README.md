@@ -1,16 +1,20 @@
 # Shoulda Matchers for Cucumber
 
+[![Gem Version][version-badge]][rubygems] [![Build Status][travis-badge]][travis] [![MIT License][license-badge]](LICENSE) [![Total Downloads][downloads-total]][rubygems] [![Downloads][downloads-badge]][rubygems] [![Hound][hound-badge]][hound]
+
 The gem to be used to support the [shoulda matchers](https://github.com/thoughtbot/shoulda-matchers) and [rspec expectation](https://github.com/rspec/rspec-expectations) syntaxes in the cucumber step methods, without picking up the whole rspec, or specifying the shoulda matchers.
 
 [version-badge]: https://img.shields.io/gem/v/shoulda-matchers-cucumber.svg
 [rubygems]: https://rubygems.org/gems/shoulda-matchers-cucumber
-[travis-badge]: https://img.shields.io/travis/thoughtbot/shoulda-matchers-cucumber/master.svg
-[travis]: https://travis-ci.org/thoughtbot/shoulda-matchers-cucumber
+[travis-badge]: https://img.shields.io/travis/majioa/shoulda-matchers-cucumber/master.svg
+[travis]: https://travis-ci.org/majioa/shoulda-matchers-cucumber
 [downloads-total]: https://img.shields.io/gem/dt/shoulda-matchers-cucumber.svg
 [downloads-badge]: https://img.shields.io/gem/dtv/shoulda-matchers-cucumber.svg
 [downloads-badge]: https://img.shields.io/gem/dtv/shoulda-matchers-cucumber.svg
 [hound-badge]: https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg
 [hound]: https://houndci.com
+[license-badge]: https://img.shields.io/badge/License-MIT-0000FF.png
+
 
 ### RSpec-Expectations
 
