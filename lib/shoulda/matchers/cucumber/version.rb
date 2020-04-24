@@ -1,7 +1,7 @@
 module Shoulda
-  module Matchers
-    module Cucumber
-      VERSION = "0.1.0"
-    end
-  end
+   module Matchers
+      module Cucumber
+         VERSION = "1.0.0"
+      end
+   end
 end
