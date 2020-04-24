@@ -1,14 +1,21 @@
 ---
-sudo: false
 language: ruby
+dist: xenial
+services:
+  - postgresql
+env:
+  matrix:
+    - DATABASE_ADAPTER=postgresql
 cache: bundler
 rvm:
-  - 2.5.5
+  - 2.5.7
 before_install: gem install bundler -v 2.0.1
 env:
    global:
     - BUNDLE_JOBS=4
-    - RAILS_ENV=test
+before_script:
+ - env|grep GEM
+ - bundle exec env|grep GEM
 addons:
    apt_packages:
     - postgresql-contrib-9.6
