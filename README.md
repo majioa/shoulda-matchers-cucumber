@@ -1,8 +1,16 @@
-# Shoulda::Matchers::Cucumber
+# Shoulda Matchers for Cucumber
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/shoulda/matchers/cucumber`. To experiment with that code, run `bin/console` for an interactive prompt.
+The gem to be used to support the [shoulda matchers](https://github.com/thoughtbot/shoulda-matchers) and [rspec expectation](https://github.com/rspec/rspec-expectations) syntaxes in the cucumber step methods, without picking up the whole rspec, or specifying the shoulda matchers.
 
-TODO: Delete this and the text above, and describe your gem
+[version-badge]: https://img.shields.io/gem/v/shoulda-matchers-cucumber.svg
+[rubygems]: https://rubygems.org/gems/shoulda-matchers-cucumber
+[travis-badge]: https://img.shields.io/travis/thoughtbot/shoulda-matchers-cucumber/master.svg
+[travis]: https://travis-ci.org/thoughtbot/shoulda-matchers-cucumber
+[downloads-total]: https://img.shields.io/gem/dt/shoulda-matchers-cucumber.svg
+[downloads-badge]: https://img.shields.io/gem/dtv/shoulda-matchers-cucumber.svg
+[downloads-badge]: https://img.shields.io/gem/dtv/shoulda-matchers-cucumber.svg
+[hound-badge]: https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg
+[hound]: https://houndci.com
 
 ### RSpec-Expectations
 
@@ -28,20 +36,40 @@ Or install it yourself as:
 Now you can use matchers in your tests as for Cucumber without picking-up the whole RSpec suite.
 
 ## Configuring
-Then, configure the gem to integrate with RSpec specifying the test framework as `:rspec_exp`:
+Then, configure the gem to integrate with RSpec specifying the test framework as `:cucumber`:
 
 ``` ruby
 Shoulda::Matchers.configure do |config|
-  config.integrate do |with|
-    with.test_framework :cucumber
-    # ...
-  end
+   config.integrate do |with|
+      with.test_framework :cucumber
+      # ...
+   end
 end
 ```
 
 ## Usage
 
-TODO: Write usage instructions here
+Write your cucumer rules as usual:
+
+```cucumber
+Feature: User model
+
+Scenario: Valid model of User
+   Given default User model
+   Then the model is valid
+```
+
+Then write its steps using shoylda matchers' syntax:
+
+```ruby
+Given("default User model") do
+   User.create(name: "Vasja")
+end
+
+Then("the model is valid") do
+   expect(User.first).to validate_presence_of(:name)
+end
+```
 
 ## Development
 

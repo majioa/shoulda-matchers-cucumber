@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "shoulda/matchers/cucumber/version"
 
 Gem::Specification.new do |spec|
-   spec.name               = "shoulda-matchers-cucumber"
+   spec.name             = "shoulda-matchers-cucumber"
    spec.version          = Shoulda::Matchers::Cucumber::VERSION
    spec.authors          = ["Malo Skrylevo"]
-   spec.email             = ["majioa@yandex.ru"]
+   spec.email            = ["majioa@yandex.ru"]
 
-   spec.summary          = %q{Use rspec-expectations directly in cucumber }
-   spec.description    = %q{The gem to be used to support the rspec expectation syntax in the cucumber step methods, without picking up the whole rspec}
+   spec.summary          = %q{ Use shoulda matchers and rspec-expectations directly in cucumber}
+   spec.description      = %q{The gem to be used to support the shoulda matchers and rspec expectation syntaxes in the cucumber step methods, without picking up the whole rspec}
    spec.homepage         = "https://github.com/majioa/shoulda-matchers-cucumber"
    spec.license          = "MIT"
 
