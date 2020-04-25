@@ -6,10 +6,10 @@ require "shoulda/matchers/cucumber/version"
 Gem::Specification.new do |spec|
    spec.name             = "shoulda-matchers-cucumber"
    spec.version          = Shoulda::Matchers::Cucumber::VERSION
-   spec.authors          = ["Malo Skrylevo"]
-   spec.email            = ["majioa@yandex.ru"]
+   spec.authors          = [ "Малъ Скрылёвъ (Malo Skrylevo)" ]
+   spec.email            = [ "majioa@yandex.ru" ]
 
-   spec.summary          = %q{ Use shoulda matchers and rspec-expectations directly in cucumber}
+   spec.summary          = %q{Use shoulda matchers and rspec-expectations directly in cucumber}
    spec.description      = %q{The gem to be used to support the shoulda matchers and rspec expectation syntaxes in the cucumber step methods, without picking up the whole rspec}
    spec.homepage         = "https://github.com/majioa/shoulda-matchers-cucumber"
    spec.license          = "MIT"
@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
    # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
    # to allow pushing to a single host or delete this section to allow pushing to any host.
    if spec.respond_to?(:metadata)
-      spec.metadata["allowed_push_host"] = "https://rubygems.com"
+      spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
       spec.metadata["homepage_uri"] = spec.homepage
       spec.metadata["source_code_uri"] = "https://github.com/majioa/shoulda-matchers-cucumber"
