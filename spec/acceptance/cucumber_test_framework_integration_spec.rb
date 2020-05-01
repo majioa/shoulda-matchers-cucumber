@@ -76,5 +76,18 @@ RSpec.describe 'shoulda-matchers integrates libs for cucumber framework' do
          expect(result).to have_output('2 passed')
       end
    end
-end
 
+   context 'when no rspec-expectation gem is included' do
+      before do
+         updating_bundle do |bundle|
+            bundle.remove_gem 'rspec-expectations'
+            bundle.add_gem 'rspec-expectations', { require: false }
+         end
+      end
+
+      it 'autorequire it' do
+         result = run_rake_tasks 'cucumber'
+         expect(result).to have_output('2 passed')
+      end
+   end
+end
