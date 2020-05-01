@@ -14,7 +14,8 @@ RSpec.describe 'shoulda-matchers integrates libs for cucumber framework' do
          end
       FILE
 
-      run_rake_tasks!(*%w(db:drop db:create db:migrate))
+      run_rake_tasks(*%w(db:drop))
+      run_rake_tasks!(*%w(db:create db:migrate))
 
       write_file 'app/models/user.rb', <<-FILE
          class User < ActiveRecord::Base
