@@ -63,7 +63,7 @@ Scenario: Valid model of User
    Then the model is valid
 ```
 
-Then write its steps using shoylda matchers' syntax:
+Then write its steps using shoulda matchers' syntax:
 
 ```ruby
 Given("default User model") do
