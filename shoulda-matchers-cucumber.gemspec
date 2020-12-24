@@ -44,8 +44,8 @@ Gem::Specification.new do |spec|
    spec.add_development_dependency "pg", "~> 1.2.3"
    spec.add_development_dependency "bootsnap", "~> 1.4.6"
    spec.add_development_dependency "listen", "~> 3.0.5"
-   spec.add_development_dependency "cucumber-rails", "~> 2.0"
+   spec.add_development_dependency "cucumber-rails", "~> 2.2"
    spec.add_runtime_dependency "shoulda-matchers", ">= 3.0.0", "< 5.0.0"
-   spec.add_runtime_dependency "cucumber", "~> 3.0"
+   spec.add_runtime_dependency "cucumber", ">= 5.0.0", "< 6.0.0"
    spec.add_runtime_dependency "rspec-expectations", "~> 3.0"
 end
